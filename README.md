@@ -1,6 +1,7 @@
 # Student-Performance-Analyis
 
-## Objective: Analyze students' exam performance to identify trends and factors affecting scores in math, reading, and writing. Provide actionable insights.
+## Objective: 
+Analyze students' exam performance to identify trends and factors affecting scores in math, reading, and writing. Provide actionable insights.
 ## Dataset:
 
 **Dataset Link**: [Student Performance Analysis](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams)
