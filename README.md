@@ -12,7 +12,6 @@ Analyze students' exam performance to identify trends and factors affecting scor
 
 **Date Accessed:** 13.01.2025
 
-## Data Cleaning
 ### Checking missing values
 
 ```
