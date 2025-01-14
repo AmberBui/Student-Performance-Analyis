@@ -23,10 +23,9 @@ There are no null values.
 ### Basic Descriptive Statistics
 #### Overall performance 
 ```
-SELECT 
-    AVG(math_score) AS avg_math,
-    AVG(reading_score) AS avg_reading,
-    AVG(writing_score) AS avg_writing
+SELECT AVG(math_score) AS avg_math,
+       AVG(reading_score) AS avg_reading,
+       AVG(writing_score) AS avg_writing
 FROM StudentsPerformance
 ```
 
@@ -94,10 +93,10 @@ ORDER BY Performance_Category DESC
 
 ```
 SELECT  parental_level_of_education,
-		AVG(math_score) AS Avg_Math,
-		AVG(writing_score) AS Avg_Writing,
-		AVG(reading_score) AS Avg_Reading,
-		AVG(math_score + writing_score + reading_score) AS Avg_Total
+        AVG(math_score) AS Avg_Math,
+        AVG(writing_score) AS Avg_Writing,
+        AVG(reading_score) AS Avg_Reading,
+        AVG(math_score + writing_score + reading_score) AS Avg_Total
 FROM StudentsPerformance
 GROUP BY parental_level_of_education
 ORDER BY Avg_Total DESC
@@ -108,10 +107,10 @@ Students' performance shows a clear trend, with better results belonging to high
 
 ```
 SELECT test_preparation_course,
-		AVG(math_score) AS Avg_Math,
-		AVG(writing_score) AS Avg_Writing,
-		AVG(reading_score) AS Avg_Reading,
-		AVG(math_score + writing_score + reading_score) AS Avg_Total
+       AVG(math_score) AS Avg_Math,
+       AVG(writing_score) AS Avg_Writing,
+       AVG(reading_score) AS Avg_Reading,
+       AVG(math_score + writing_score + reading_score) AS Avg_Total
 FROM StudentsPerformance
 GROUP BY test_preparation_course
 ORDER BY Avg_Total DESC
@@ -121,12 +120,11 @@ Students who completed the preparation course achieved significantly higher scor
 #### Lunch Type
 
 ```
-SELECT 
-    lunch,
-    AVG(math_score) AS avg_math,
-    AVG(reading_score) AS avg_reading,
-    AVG(writing_score) AS avg_writing,
-	AVG(math_score + writing_score + reading_score) AS Avg_Total
+SELECT lunch,
+       AVG(math_score) AS avg_math,
+       AVG(reading_score) AS avg_reading,
+       AVG(writing_score) AS avg_writing,
+       AVG(math_score + writing_score + reading_score) AS Avg_Total
 FROM StudentsPerformance
 GROUP BY lunch
 ORDER BY lunch
@@ -141,11 +139,11 @@ Students with standard lunch plans consistently perform better academically than
 - These patterns emphasize the influence of socioeconomic status, parental background, and test preparation on academic outcomes.
 
 ### Actions
-- Lunch Program Enhancements: Improve nutritional quality for all students, with additional focus on those receiving free or reduced lunches to address disparities in performance.
+- Lunch Program Enhancements: Improve nutritional quality for all students, with additional focus on those receiving free or reduced lunches to address gaps in performance.
 
 - Parental Engagement: Design programs to empower parents at all education levels, including workshops and resources that support their children's learning.
 
-- Targeted Support: Combine academic assistance like tutoring with holistic support for students from lower-income families or less-educated parental backgrounds to foster equal opportunities.
+- Targeted Support: Combine academic assistance like tutoring with support for students from lower-income families or less-educated parental backgrounds to foster equal opportunities.
 
 			
 
