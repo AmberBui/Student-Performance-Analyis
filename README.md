@@ -14,7 +14,7 @@ Analyze students' exam performance to identify trends and factors affecting scor
 
 ### Checking missing values
 
-```
+```sql
 SELECT * FROM StudentsPerformance
 WHERE math_score IS NULL OR reading_score IS NULL OR writing_score IS NULL
 ```
@@ -22,7 +22,8 @@ There are no null values.
 
 ### Basic Descriptive Statistics
 #### Overall performance 
-```
+
+```sql
 SELECT AVG(math_score) AS avg_math,
        AVG(reading_score) AS avg_reading,
        AVG(writing_score) AS avg_writing
@@ -31,7 +32,8 @@ FROM StudentsPerformance
 
 #### Scores distribution 
 
-```
+
+```sql
 SELECT Exam, 
        Score, 
        COUNT(*) AS StudentNumber
@@ -57,14 +59,16 @@ ORDER BY Score DESC
 ```
 
 #### Top performance 
-```
+
+```sql
 SELECT *
 FROM StudentsPerformance
 WHERE writing_score > 90 AND math_score > 90 AND reading_score > 90
 ```
 #### Performance Categorization
 
-```
+
+```sql
 WITH Performance_Category AS (
   SELECT 
       (math_score + writing_score + reading_score) / 3 AS Average_Score
@@ -91,7 +95,8 @@ ORDER BY Performance_Category DESC
 
 #### Parental Education
 
-```
+
+```sql
 SELECT  parental_level_of_education,
         AVG(math_score) AS Avg_Math,
         AVG(writing_score) AS Avg_Writing,
@@ -105,7 +110,8 @@ Students' performance shows a clear trend, with better results belonging to high
 
 #### Test Preparation 
 
-```
+
+```sql
 SELECT test_preparation_course,
        AVG(math_score) AS Avg_Math,
        AVG(writing_score) AS Avg_Writing,
@@ -119,7 +125,8 @@ Students who completed the preparation course achieved significantly higher scor
 
 #### Lunch Type
 
-```
+
+```sql
 SELECT lunch,
        AVG(math_score) AS avg_math,
        AVG(reading_score) AS avg_reading,
