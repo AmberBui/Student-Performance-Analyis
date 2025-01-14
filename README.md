@@ -1,4 +1,4 @@
-# Student-Performance-Analyis
+# Student-Performance-Analyis - SQL
 
 ## Objective: 
 Analyze students' exam performance to identify trends and factors affecting scores in math, reading, and writing. Provide actionable insights.
